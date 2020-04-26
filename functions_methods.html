@@ -26,6 +26,10 @@
       {
         nome:'Roberval',
         nota:4,
+      },
+      {
+        nome: 'Roberval',
+        nota:9,
       }
     ]
 
@@ -49,10 +53,13 @@
     ]
       
     function calculaMedia(alunos){
+      let soma = 0;
       //return (alunos[0].nota + alunos[1].nota + alunos[2].nota + alunos[3].nota)/4;
       for (let i = 0; i < alunos.length; i++){
-        console.log(i);
+        soma = soma + alunos[i].nota;
       }
+      const media = soma / alunos.length;
+      return media;
     }
 
     let mediaA = calculaMedia(alunosTurmaA);
