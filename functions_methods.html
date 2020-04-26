@@ -48,8 +48,11 @@
       }
     ]
       
-    function calculaMedia(x){
-      return (x[0].nota + x[1].nota + x[2].nota + x[3].nota)/4;
+    function calculaMedia(alunos){
+      //return (alunos[0].nota + alunos[1].nota + alunos[2].nota + alunos[3].nota)/4;
+      for (let i = 0; i < alunos.length; i++){
+        console.log(i);
+      }
     }
 
     let mediaA = calculaMedia(alunosTurmaA);
