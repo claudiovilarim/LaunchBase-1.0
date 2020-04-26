@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // Notas das turmas de alunos.
+    let alunosTurmaA = [
+      {
+        nome:'Juao',
+        nota:7,
+      },
+      {
+        nome:'Creuza',
+        nota:6.3,
+      },
+      {
+        nome:'Lesbão',
+        nota:8.5,
+      },
+      {
+        nome:'Roberval',
+        nota:4,
+      }
+    ]
+
+    let alunosTurmaB = [
+      {
+        nome:'CLeiton Rasta',
+        nota:10,
+      },
+      {
+        nome:'Deboxado',
+        nota:9.3,
+      },
+      {
+        nome:'zumbi',
+        nota:7,
+      },
+      {
+        nome:'Roberval',
+        nota:4,
+      }
+    ]
+      
+    function calculaMedia(x){
+      return (x[0].nota + x[1].nota + x[2].nota + x[3].nota)/4;
+    }
+
+    let mediaA = calculaMedia(alunosTurmaA);
+    let mediaB = calculaMedia(alunosTurmaB);
+
+    function parabenizarTurma(media, turma){
+      if (media >= 7){
+        console.log(`A média da ${turma} foi de ${media}. Parabéns!`);
+      }else{
+        console.log(`${media}! Infelizmente a média da ${turma} está abaixo de 7.`)
+      }
+    }
+
+    // Exibe a média da turma através do calculo da função parabenizarTurma.
+    parabenizarTurma(mediaA, 'TurmaA');
+    parabenizarTurma(mediaB, 'TurmaB');
+
+
+  </script>
+
+
+
+</body>
+</html>
