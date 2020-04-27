@@ -28,7 +28,7 @@
         nota:4,
       },
       {
-        nome: 'Roberval',
+        nome: 'Ronylsu',
         nota:9,
       }
     ]
@@ -76,6 +76,29 @@
     // Exibe a média da turma através do calculo da função parabenizarTurma.
     parabenizarTurma(mediaA, 'TurmaA');
     parabenizarTurma(mediaB, 'TurmaB');
+
+    // Reprovando alunos com nota abaixo de 7
+    function marcarReprovado(alunos){
+      for (let aluno =0; aluno < alunos.length; aluno++){
+        if (alunos[aluno].nota < 7){
+          alunos[aluno].reprovado = true
+        }else{
+          alunos[aluno].reprovado = false;
+        }
+      }
+    }
+
+     marcarReprovado(alunosTurmaA);
+     console.table(alunosTurmaA);
+
+    // Informando apenas os alunos reprovados
+    function enviaMensagemReprovado(aluno){
+      if (aluno.reprovado == true){
+        console.log(`O aluno ${aluno.nome} está reprovado`)
+      }
+    }
+
+    enviaMensagemReprovado(alunosTurmaA);
 
 
   </script>
