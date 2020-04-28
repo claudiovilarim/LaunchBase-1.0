@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcs</title>
+</head>
+
+<body>
+  
+
+  <script>
+
+    // Calculate BMI - Body Mass Index
+    const name = 'Robsu'
+    const weight = 84
+    const height = 1.88
+    const imc = weight / (height * height)
+
+    console.log(imc)
+
+    if (imc >= 30){
+      document.write('Carlos, you are outweigh!')
+    }else{
+      document.write('Carlos, you are not outweigh! ')
+    }
+
+    // Calculate retirement
+    const name2 = 'Creuza'
+    const sex = 'F'
+    const age = 48
+    const contribuiton = 23
+
+    function calculateRetirement(name, sex, age, contribuiton){
+      if(sex = 'M'){
+        if(contribuiton >= 35 && (age + contribuiton) >= 95){
+          document.write(`${name}, you can retire!`)
+        }else{
+          document.write(`${name2}, You can't retire now!`)
+        }
+      }else{
+        if( sem = 'F'){
+          if(contribuiton >= 30 && (age + contribuiton) >= 85){
+            document.write(`${name2}, you can retire`)
+          }else{
+            document.write(`${name2}, You can't retire now!`)
+          }
+        }
+      }
+    }
+
+    calculateRetirement('Creuza', 'F', 30, 23)
+
+  </script>
+
+
+</body>
+</html>
