@@ -78,18 +78,13 @@
     parabenizarTurma(mediaB, 'TurmaB');
 
     // Reprovando alunos com nota abaixo de 7
-    function marcarReprovado(alunos){
-      for (let aluno =0; aluno < alunos.length; aluno++){
-        if (alunos[aluno].nota < 7){
-          alunos[aluno].reprovado = true
-        }else{
-          alunos[aluno].reprovado = false;
-        }
+    function marcarReprovado(aluno){
+      aluno.reprovado = false;
+      if (aluno.nota < 7){
+        aluno.reprovado = true;
       }
     }
 
-     marcarReprovado(alunosTurmaA);
-     console.table(alunosTurmaA);
 
     // Informando apenas os alunos reprovados
     function enviaMensagemReprovado(aluno){
@@ -98,7 +93,15 @@
       }
     }
 
-    enviaMensagemReprovado(alunosTurmaA);
+    function alunoReprovado(alunos){
+      for (let aluno =0; aluno < alunos.length; aluno++){
+        marcarReprovado(aluno);
+        enviaMensagemReprovado(aluno);
+      }
+    }
+
+    alunoReprovado(alunosTurmaA);
+    alunoReprovado(alunosTurmaB);
 
 
   </script>
