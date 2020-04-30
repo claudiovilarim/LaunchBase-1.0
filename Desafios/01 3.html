@@ -12,7 +12,7 @@
   <script>
 
     // ## Usuários e tecnologias
-    let users = [
+    var users = [
       {
         name: 'Juao',
         technologie: ['HTML', 'CSS']
@@ -26,31 +26,29 @@
         technologie: ['HTML', 'Node.js']
       }
     ]
-
+/*
     for (let i = 0; i < users.length; i++){
       document.write( `${users[i].name} trabalha com ${users[i].technologie} <br>` );
     }
-    
-
+*/
     // ## Busca por tecnologia
-    for (i = 0; i < users.length; i++){
-      workWithCss(users[i]);
-    }
-
-    function workWithCss(user){
-      let person = true;
-      for (i=0; i<users.length; i++){
-        for (j=0; j<user.technologie.length; j++){
-          if ( user.technologie[j] == 'CSS'){
-            return user.name;
-            //console.log(user.name);
-          }
+    function checkCss(user){
+      const technologie = user.technologie;
+      for (i=0; i<technologie.length; i++){
+        if(technologie[i] == 'CSS'){
+          return true;
         }
       }
+      return false;
     }
 
+    for (let i = 0; i < users.length; i++) {
+      const userWorkWithCss = checkCss(users[i])
 
-
+      if(userWorkWithCss) {
+        console.log(`The user ${users[i].name} works with CSS`)
+      }
+    }
 
   </script>
 
