@@ -6,6 +6,7 @@
 
 body{
   background: #282c3b;
+  font-family: 'Lato', sans-serif;
 }
 
 header{
@@ -32,7 +33,7 @@ main{
 main img{
   display: flex;
   border-radius: 50%;
-  max-width: 250px;
+  max-width: 220px;
   border: 2px solid #19d14e;
   margin: auto;
 }
