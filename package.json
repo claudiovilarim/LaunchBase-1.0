@@ -1,0 +1,27 @@
+{
+  "name": "LaunchBase-1.0",
+  "version": "1.0.0",
+  "description": "RocketSeat bootcamp",
+  "main": "portifolio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudioDroid/LaunchBase-1.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudioDroid/LaunchBase-1.0/issues"
+  },
+  "homepage": "https://github.com/ClaudioDroid/LaunchBase-1.0#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
